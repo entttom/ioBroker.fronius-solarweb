@@ -242,7 +242,7 @@ class FroniusSolarweb extends utils.Adapter {
     if (this.isPro) {
       statusArray.push({
         path: 'energyforecast',
-        url: 'https://swqapi.solarweb.com/pvsystems/$id/weather/energyforecast?from=' + toDate.getTime() + '&to=' + Date.now(),
+        url: 'https://swqapi.solarweb.com/pvsystems/$id/weather/energyforecast?from=' + toDate.getTime() + '&to=' + (Date.now() + 24*1000*3600),
         desc: 'Energy Forecast',
         forceIndex: true,
       });
